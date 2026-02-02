@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* Main Card */
+.container {
+    width: 90%;
+    max-width: 520px;
+    padding: 35px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Heading */
+.container h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Image */
+.image-box {
+    margin: 20px auto;
+}
+
+.image-box img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #00f2fe;
+    box-shadow: 0 0 25px rgba(0, 242, 254, 0.8);
+}
+
+/* Info Section */
+.info {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.info p {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.info span {
+    font-weight: 600;
+    color: #00f2fe;
+}
+
+/* Emotion Badge */
+.emotion-box {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Emotion Colors */
+.emotion-box.happy {
+    background: linear-gradient(135deg, #00c853, #b2ff59);
+    color: #003300;
+}
+
+.emotion-box.sad {
+    background: linear-gradient(135deg, #1565c0, #42a5f5);
+}
+
+.emotion-box.angry {
+    background: linear-gradient(135deg, #c62828, #ff5252);
+}
+
+.emotion-box.fear {
+    background: linear-gradient(135deg, #4a148c, #7b1fa2);
+}
+
+.emotion-box.neutral {
+    background: linear-gradient(135deg, #616161, #9e9e9e);
+}
+
+/* Footer */
+.footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #dddddd;
+    opacity: 0.85;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

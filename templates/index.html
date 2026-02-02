@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Emotion Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+
+    <button onclick="startCamera()">Start Camera</button>
+
+    <div class="camera-frame">
+        <img id="video" />
+    </div>
+
+    <div class="info">
+        <p>Smile: <span id="smile"></span></p>
+        <p>Emotion: <span id="emotion"></span></p>
+        <p>Age: <span id="age"></span></p>
+        <p>Mask: <span id="mask"></span></p>
+    </div>
+
+    <div id="extra"></div>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

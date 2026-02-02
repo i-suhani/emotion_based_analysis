@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Emotion Detection Result</h1>
+
+    <div class="image-box">
+        <img src="{{ url_for('static', filename=data.image) }}" alt="Captured Image">
+    </div>
+
+    <div class="info">
+        <p>Emotion: <span>{{ data.emotion }}</span></p>
+        <p>Smile Status: <span>{{ data.smile }}</span></p>
+        <p>Age Group: <span>{{ data.age }}</span></p>
+        <p>Mask Status: <span>{{ data.mask }}</span></p>
+    </div>
+
+    <!-- EMOTION BADGE -->
+    <div class="emotion-box {{ data.emotion | lower }}">
+        {{ data.emotion }}
+    </div>
+
+    <!-- SAD → JOKE -->
+    {% if data.emotion == "Sad" and data.joke %}
+        <div class="emotion-box sad" style="margin-top: 20px;">
+            Here’s something to cheer you up 😄
+        </div>
+        <p style="margin-top: 15px; font-size: 18px;">
+            {{ data.joke }}
+        </p>
+    {% endif %}
+
+    <!-- ANGRY → SONG -->
+    {% if data.emotion == "Angry" and data.song %}
+        <div class="emotion-box angry" style="margin-top: 20px;">
+            Take a deep breath 🌿  
+            Here’s a calming song
+        </div>
+
+        <iframe
+            src="{{ data.song }}"
+            width="100%"
+            height="200"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
